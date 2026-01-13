@@ -43,6 +43,25 @@ body {
     color: #fff;
 }
 
+.support-mini {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.support-mini a {
+    text-decoration: none;
+    color: #374151;
+    white-space: nowrap;
+}
+
+.support-mini a:hover {
+    text-decoration: underline;
+}
+
+
 /* Stepper */
 .stepper {
     display: flex;
