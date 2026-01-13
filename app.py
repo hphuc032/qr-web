@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file, jsonify
+from flask import Flask, render_template, request, send_file, jsonify, send_from_directory
 from io import BytesIO
 import qrcode.constants
 from ChangeLinkToQRCODE import (
@@ -16,6 +16,10 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route("/google317c82e13bdd3a2a.html")
+def google_verify():
+    return send_from_directory(app.static_folder, "google317c82e13bdd3a2a.html")
 
 
 @app.route('/api/generate', methods=['POST'])
